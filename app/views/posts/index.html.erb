@@ -1,0 +1,17 @@
+<h1>Posts page</h1>
+
+<div>
+	
+	<%  @posts.each do |p| %>
+		
+		<h2> <%= p.title %> </h2>
+		<p> <%= p.content %> </p>
+		
+		<p> <%= link_to "Editar" , edit_post_path( p ) %> </p>
+		<p> <%= link_to "Eliminar" , p, :confirm => "Seguro que quiere borrar el post?" , :method => :destroy %> </p>
+		
+		<hr/>
+	
+	<% end %>
+	
+</div>
