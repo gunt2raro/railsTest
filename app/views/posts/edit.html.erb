@@ -1,0 +1,19 @@
+<h1> <%= @post.title %> </h1>
+
+<div>
+	
+	<%= form_for @post do |p| %>
+	
+		<p> 
+			<%= p.label :title %> 
+			<%= p.text_field :title %>
+		</p>
+		<p> 
+			<%= p.label :content %> <br />
+			<%= p.text_area :content %>
+		</p>
+		<p> <%= p.submit "Guardar" %>  </p>
+	
+	<% end %>
+	
+</div>
